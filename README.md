@@ -1,6 +1,6 @@
 # git-of-theseus.cr
 
-TODO: Write a description here
+Clone of [git-of-theseus](https://github.com/erikbern/git-of-theseus) in crystal lang.
 
 ## Installation
 
@@ -8,7 +8,15 @@ TODO: Write installation instructions here
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+Usage: git-of-theseus.cr [repo]
+    --interval=INT                   Min difference between commits to analyze (default: 604800)
+    --outdir=PATH                    Output directory to store results (default: .)
+    --branch=NAME                    Branch to track (default: refs/heads/master)
+    -h, --help                       Show this help
+```
+
+It would generate json files compatible with plot generators of git-of-theseus.
 
 ## Development
 
