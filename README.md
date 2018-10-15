@@ -4,7 +4,14 @@ Clone of [git-of-theseus](https://github.com/erikbern/git-of-theseus) in crystal
 
 ## Installation
 
-TODO: Write installation instructions here
+Download the [last release binary](https://github.com/smacker/git-of-theseus.cr/releases) or install it from master:
+
+```
+git clone https://github.com/smacker/git-of-theseus.cr.git
+cd git-of-theseus.cr
+crystal build --release src/git-of-theseus.cr
+./git-of-theseus
+```
 
 ## Usage
 
