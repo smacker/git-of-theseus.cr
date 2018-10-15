@@ -9,3 +9,14 @@ before_install:
 script:
   - git clone https://github.com/erikbern/git-of-theseus
   - crystal run src/git-of-theseus.cr -- --outdir got git-of-theseus
+
+before_deploy:
+  - crystal build --release src/git-of-theseus.cr
+
+deploy:
+  provider: releases
+  api_key: $GITHUB_TOKEN
+  file: git-of-theseus
+  skip_cleanup: true
+  on:
+    tags: true
