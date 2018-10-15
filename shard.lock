@@ -1,0 +1,6 @@
+version: 1.0
+shards:
+  git:
+    github: smacker/libgit2.cr
+    commit: 2df11ebea6c803a7aacf0457ecd69bc0fa27ff9a
+

@@ -1,0 +1,17 @@
+name: git-of-theseus
+version: 0.1.0
+
+authors:
+  - Maxim Sukharev <maxim@sourced.tech>
+
+targets:
+  git-of-theseus:
+    main: src/git-of-theseus.cr
+
+dependencies:
+  git:
+    github: smacker/libgit2.cr
+
+crystal: 0.25.1
+
+license: MIT
