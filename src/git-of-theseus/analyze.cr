@@ -21,7 +21,7 @@ module GitOfTheseus
       walker.push(branch_head)
       walker.each do |commit|
         epoch_time = commit.epoch_time
-        cohort = Time.epoch(epoch_time).year.to_s
+        cohort = Time.unix(epoch_time).year.to_s
         sha = commit.sha
         @commit2cohort[sha] = cohort
         @curves_set.add({"cohort", cohort})
@@ -140,7 +140,7 @@ module GitOfTheseus
     end
 
     def ignore_entry(entry : Git::TreeEntry)
-      @repo.lookup_blob(entry.oid).is_binary
+      @repo.lookup_blob(entry.oid).binary?
     end
 
     def make_json(key_type : String)
